@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notebook/SecondScreen.dart';
 import 'package:rive/rive.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/widgets.dart';
@@ -39,12 +40,16 @@ class _HomeState extends State<Home> {
               },
             ),
           ),
+                    SizedBox(height: 10,),
+
                     Text(
-                      "Write down important things and your thoughts here.",
+                      "Write down important things and your thoughts here. Give vent to your emotions and thoughts.",
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           fontFamily: "Poppins",
                           height: 1.2,
+                        color: Colors.black,
+
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -55,9 +60,12 @@ class _HomeState extends State<Home> {
                         child: RiveAnimation.asset('assets/3264-6879-tree-loading-bar.riv'),
                       ),
                     ),
-                    ElevatedButton(onPressed: () {},
+                    ElevatedButton(onPressed: () { Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SecondScreen()),
+                    );},
                         child: Text('Start', style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 24,
                         )),
                       style: ElevatedButton.styleFrom(
                         minimumSize: Size(327,50),

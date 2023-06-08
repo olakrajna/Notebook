@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:notebook/SecondScreen.dart';
+import 'package:notebook/theme.dart';
 import 'home.dart';
 
 void main() {
@@ -13,10 +15,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Home(),
+      debugShowCheckedModeBanner: false,
+      theme: Themes.light,
+      darkTheme: Themes.dark,
+      themeMode: ThemeMode.light,
+
+      home: const SecondScreen(),
     );
   }
 }
